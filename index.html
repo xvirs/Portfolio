@@ -93,8 +93,10 @@
                                 </svg>
                             </a>
 
-                            <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="mail" href="#" onclick="copyToClipboard()">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
+                            <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="mail" href="#"
+                                onclick="copyToClipboard(event)">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24"
+                                    width="24">
                                     <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
                                         d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z">
                                     </path>
@@ -102,21 +104,24 @@
                                         d="M22 6 12 13 2 6"></path>
                                 </svg>
                             </a>
-                            
+
+                        <div id="copy-message" style="display: none; position: fixed; top: 20px; right: 20px; background: #323232; color: #fff; padding: 10px 20px; border-radius: 5px; font-size: 14px; z-index: 1000; text-align: center;">Correo copiado al portapapeles</div>
+
                             <script>
-                                function copyToClipboard() {
+                                function copyToClipboard(event) {
+                                    event.preventDefault(); // Prevenir comportamiento de enlace
                                     const email = "rosales.xavier.eloy@gmail.com";
                                     navigator.clipboard.writeText(email).then(() => {
-                                        alert("Correo copiado al portapapeles: " + email);
+                                        const message = document.getElementById("copy-message");
+                                        message.style.display = "block"; // Mostrar mensaje
+                                        setTimeout(() => {
+                                            message.style.display = "none"; // Ocultar mensaje después de 3 segundos
+                                        }, 5000); // Duración del mensaje
                                     }).catch(err => {
                                         console.error("No se pudo copiar el correo: ", err);
                                     });
                                 }
                             </script>
-                            
-
-
-
                         </div>
                     </div>
 
@@ -289,14 +294,15 @@
                 </header>
                 <div class="text">
                     <ul>
-                        <li data-aos="fade-up-left">🎓 <strong>Técnico Universitario en Programación</strong>- (UTN)
+                        <li data-aos="fade-up-left">🎓 <strong>Técnico Universitario en Programación</strong> - (UTN)
                         </li>
-                        <li data-aos="fade-up-left">🚀 <strong>Aceleración de Alkemy</strong>- Alkemy</li>
-                        <li data-aos="fade-up-left">📜 <strong>Diplomado en Kotlin</strong>- Edutyn Academy</li>
-                        <li data-aos="fade-up-left">🛠️ <strong>Arquitecturas para Android con Kotlin</strong>- Udemy
+
+                        <li data-aos="fade-up-left">🛠️ <strong>Arquitecturas para Android con Kotlin</strong> - Udemy
                         </li>
-                        <li data-aos="fade-up-left">📱 <strong>Jetpack Compose</strong>- Udemy</li>
-                        <li data-aos="fade-up-left">🧩 <strong>Trayecto Programador</strong>- Plan111Mil</li>
+                        <li data-aos="fade-up-left">📜 <strong>Diplomado en Kotlin</strong> - Edutyn Academy</li>
+                        <li data-aos="fade-up-left">📱 <strong>Jetpack Compose</strong> - Udemy</li>
+                        <li data-aos="fade-up-left">🚀 <strong>Aceleración de Alkemy</strong> - Alkemy</li>
+                        <li data-aos="fade-up-left">🧩 <strong>Trayecto Programador</strong> - Plan111Mil</li>
                     </ul>
                     <div data-aos="fade-up-left" class="button">
                         <a target="_blank" href="./Desarrollador Android - C_D - EN.pdf">
