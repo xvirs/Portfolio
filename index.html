@@ -93,21 +93,29 @@
                                 </svg>
                             </a>
 
-                            <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="ig" target="_blank"
-                                href="https://www.instagram.com/xvir73?igsh=OGlobjcydWlzbzFx">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24"
-                                    width="24">
-                                    <path stroke="#fff" stroke-linejoin="round" d="M18 6.5a0.5 0.5 0 0 1 0 -1"
-                                        stroke-width="1"></path>
-                                    <path stroke="#fff" stroke-linejoin="round" d="M18 6.5a0.5 0.5 0 0 0 0 -1"
-                                        stroke-width="1"></path>
-                                    <path stroke="#fff" stroke-linejoin="round" d="M7 12a5 5 0 1 0 10 0 5 5 0 1 0 -10 0"
-                                        stroke-width="1"></path>
-                                    <path stroke="#fff"
-                                        d="M16.5 1.5h-9a6 6 0 0 0 -6 6v9a6 6 0 0 0 6 6h9a6 6 0 0 0 6 -6v-9a6 6 0 0 0 -6 -6Z"
-                                        stroke-width="1"></path>
+                            <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="mail" href="#" onclick="copyToClipboard()">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
+                                    <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                        d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z">
+                                    </path>
+                                    <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                        d="M22 6 12 13 2 6"></path>
                                 </svg>
                             </a>
+                            
+                            <script>
+                                function copyToClipboard() {
+                                    const email = "rosales.xavier.eloy@gmail.com";
+                                    navigator.clipboard.writeText(email).then(() => {
+                                        alert("Correo copiado al portapapeles: " + email);
+                                    }).catch(err => {
+                                        console.error("No se pudo copiar el correo: ", err);
+                                    });
+                                }
+                            </script>
+                            
+
+
 
                         </div>
                     </div>
@@ -130,7 +138,8 @@
         <div class="wrapper">
             <header>
                 <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Bienvenidos a mi portafolio.</h2>
-                <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Hago aplicaciones para usuarios y codigo para programadores.</p>
+                <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Hago aplicaciones para usuarios y codigo
+                    para programadores.</p>
             </header>
 
             <div class="cards">
@@ -156,21 +165,21 @@
                 <div data-aos="fade-up-right" class="card left">
                     <div class="image">
                         <a target="_blank" href="https://github.com/xvirs/MovieLists">
-                            <img src="./assets/Mockups/FilmDex.png"
-                                alt="FilmDex - Gestiona tus Listas de Peliculas">
+                            <img src="./assets/Mockups/FilmDex.png" alt="FilmDex - Gestiona tus Listas de Peliculas">
                         </a>
                     </div>
-                
+
                     <div class="text">
-                        <h3><a href="https://play.google.com/store/apps/details?id=com.proyect.movielists" target="_blank">FilmDex</a></h3>
+                        <h3><a href="https://play.google.com/store/apps/details?id=com.proyect.movielists"
+                                target="_blank">FilmDex</a></h3>
                         <p>Gestiona tus Listas de Peliculas.</p>
                     </div>
-                
+
                     <div class="technologies">
                         <p>Play Store | Kotlin | Clean Architecture | TMDB</p>
                     </div>
                 </div>
-                
+
 
                 <div data-aos="fade-up-left" class="card left">
                     <div class="image">
@@ -193,7 +202,8 @@
                 <div data-aos="fade-up-right" class="card left">
                     <div class="image">
                         <a target="_blank" href="https://github.com/xvirs/Reciklo">
-                            <img src="./assets/Mockups/Reciklo.png" alt="Reciklo - Carga de stock de productos Automovilisticos">
+                            <img src="./assets/Mockups/Reciklo.png"
+                                alt="Reciklo - Carga de stock de productos Automovilisticos">
                         </a>
                     </div>
 
@@ -215,92 +225,53 @@
             <img class="looper dois" src="./assets/LooperGroup.png" alt="">
             <img class="looper tres" src="./assets/LooperGroup.png" alt="">
     </section>
-    <section id="competencias">
-        <div class="wrapper">
-            <header>
-                <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Habilidades en Desarrollo Android</h2>
-            </header>
-
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper cards">
-                    <!-- Tarjeta 1: Kotlin -->
-                    <div class="swiper-slide card">
-                        <ion-icon name="logo-kotlin"></ion-icon>
-                        <span>Kotlin</span>
-                        <p>Experto en desarrollo de aplicaciones Android utilizando Kotlin. He trabajado en proyectos
-                            que requieren un alto nivel de eficiencia y mantenibilidad del código.</p>
-                    </div>
-
-                    <!-- Tarjeta 2: Arquitecturas MVVM y Clean -->
-                    <div class="swiper-slide card">
-                        <ion-icon name="layers-outline"></ion-icon>
-                        <span>Arquitecturas MVVM y Clean</span>
-                        <p>Implementación de arquitecturas modernas como MVVM y Clean Architecture para asegurar la
-                            escalabilidad y mantenibilidad de las aplicaciones.</p>
-                    </div>
-
-                    <!-- Tarjeta 3: Jetpack Compose y XML -->
-                    <div class="swiper-slide card">
-                        <ion-icon name="code-slash-outline"></ion-icon>
-                        <span>Jetpack Compose y XML</span>
-                        <p>Diseño de interfaces avanzadas utilizando Jetpack Compose y XML, siguiendo las mejores
-                            prácticas de Material Design.</p>
-                    </div>
-
-                    <!-- Tarjeta 4: REST APIs y Retrofit -->
-                    <div class="swiper-slide card">
-                        <ion-icon name="cloud-upload-outline"></ion-icon>
-                        <span>REST APIs y Retrofit</span>
-                        <p>Consumo eficiente de REST APIs utilizando Retrofit, junto con la gestión de datos locales
-                            mediante Room.</p>
-                    </div>
-
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
-
     <section id="competenciasDesktop">
         <div class="wrapper">
             <div class="content">
                 <header>
-                    <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Habilidades en Desarrollo Android
-                    </h2>
+                    <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Logros</h2>
                 </header>
 
                 <div class="cards">
                     <div data-aos="fade-right" data-aos-offset="450" data-aos-easing="ease-in-sine" class="card one">
-                        <ion-icon name="phone-portrait-outline"></ion-icon>
-                        <span>Kotlin Multiplataforma</span>
-                        <p>Desarrollo cross-platform para Android e iOS con código compartido (+80%) y UI nativa con
-                            Compose/SwiftUI</p>
+                        <ion-icon name="megaphone-outline"></ion-icon> <!-- Icono para comunicación/presentación -->
+                        <span>Liderar una conferencia de KMP</span>
+                        <p>Lideré una conferencia interna sobre Kotlin Multiplataforma (KMP), aportando análisis técnico
+                            y prácticas
+                            estratégicas para implementar esta tecnología, destacando mi capacidad de comunicación y
+                            liderazgo técnico.</p>
                     </div>
 
                     <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" class="card two">
-                        <ion-icon name="layers-outline"></ion-icon>
-                        <span>Arquitecturas MVVM y Clean Architecture</span>
-                        <p>Implementación de arquitecturas modernas como MVVM y Clean Architecture para asegurar la
-                            escalabilidad y mantenibilidad de las aplicaciones.</p>
+                        <ion-icon name="logo-google-playstore"></ion-icon> <!-- Icono para Play Store/publicación -->
+                        <span>Publicación en la Play Store</span>
+                        <p>Poseo experiencia en el desarrollo de aplicaciónes, cumpliendo con los requisitos
+                            regulatorios
+                            necesarios para su publicación exitosa en la Play Store. Este logro refleja mi capacidad
+                            para
+                            gestionar el ciclo completo de desarrollo.</p>
                     </div>
 
                     <div data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine" class="card three">
-                        <ion-icon name="code-slash-outline"></ion-icon>
-                        <span>Jetpack Compose y XML</span>
-                        <p>Diseño de interfaces avanzadas utilizando Jetpack Compose y XML, siguiendo las mejores
-                            prácticas de Material Design.</p>
+                        <ion-icon name="briefcase-outline"></ion-icon> <!-- Icono para experiencia profesional -->
+                        <span>+6 Años de Experiencia IT</span>
+                        <p>Profesional en IT desde 2018, con experiencia en diversas áreas. He desarrollado habilidades
+                            en la
+                            gestión de equipos y metodologías ágiles, entre otros, consolidando mi perfil orientado a
+                            resultados en entornos dinámicos.</p>
                     </div>
 
-                    <div data-aos="fade-right" data-aos-offset="50" data-aos-easing="ease-in-sine" class="card for">
-                        <ion-icon name="cloud-upload-outline"></ion-icon>
-                        <span>REST APIs y Retrofit</span>
-                        <p>Consumo eficiente de REST APIs utilizando Retrofit, junto con la gestión de datos locales
-                            mediante Room.</p>
+                    <div data-aos="fade-right" data-aos-offset="50" data-aos-easing="ease-in-sine" class="card four">
+                        <ion-icon name="settings-outline"></ion-icon> <!-- Icono para gestión de proyectos -->
+                        <span>Liderazgo en Desarrollo de Proyectos</span>
+                        <p>Dirigí proyectos desde el inicio, definiendo requerimientos junto a los clientes,
+                            desarrollándolos completamente
+                            y llevando a producción con éxito. Destacando mi habilidad para gestionar proyectos de
+                            principio a fin.</p>
                     </div>
-
-
                 </div>
             </div>
+
         </div>
 
         <img class="textoHabilidades" src="./assets/HABILIDADES.png" alt="">
@@ -314,29 +285,26 @@
             </div>
             <div class="content" style="width: 100%; max-width: 100%; margin: 0 auto; padding: 0;">
                 <header>
-                    <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Un poco sobre mí</h2>
+                    <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Certificaciones</h2>
                 </header>
                 <div class="text">
-                    <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"><span>Hago código para programadores
-                            y aplicaciones para usuarios</span> </p>
                     <ul>
-                        <li data-aos="fade-up-left">🚀 <strong>6+ Años en el mundo del desarrollo</strong></li>
-                        <li data-aos="fade-up-left">🤖 <strong>Kotlin Multiplataforma | IOs & Android</strong></li>
-                        <li data-aos="fade-up-left">🔐 <strong>CrediCuotas</strong> | App financiera con 50k+ usuarios
+                        <li data-aos="fade-up-left">🎓 <strong>Técnico Universitario en Programación</strong>- (UTN)
                         </li>
-                        <li data-aos="fade-up-left">🔄 <strong>apps en Play Store </strong>| 15 apps en producción</li>
-                        <li data-aos="fade-up-left">📱 <strong>Jetpack Compose</strong> & Material Design</li>
-                        <li data-aos="fade-up-left">🧩 <strong>Tech Lead Mobile</strong> | liderando equipos técnicos
+                        <li data-aos="fade-up-left">🚀 <strong>Aceleración de Alkemy</strong>- Alkemy</li>
+                        <li data-aos="fade-up-left">📜 <strong>Diplomado en Kotlin</strong>- Edutyn Academy</li>
+                        <li data-aos="fade-up-left">🛠️ <strong>Arquitecturas para Android con Kotlin</strong>- Udemy
                         </li>
+                        <li data-aos="fade-up-left">📱 <strong>Jetpack Compose</strong>- Udemy</li>
+                        <li data-aos="fade-up-left">🧩 <strong>Trayecto Programador</strong>- Plan111Mil</li>
                     </ul>
                     <div data-aos="fade-up-left" class="button">
-                        <a target="_blank" href="./Desarrollador Andorid - C_D - EN.pdf">
+                        <a target="_blank" href="./Desarrollador Android - C_D - EN.pdf">
                             <button>🔗 Mira mi CV <ion-icon name="enter-outline"></ion-icon></button>
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <a id="buttonHome" class="show" target="_blank" href="">
