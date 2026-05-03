@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git clone *)"
+      "Bash(git clone *)",
+      "Bash(curl -sL https://antigravity.google/ -o /tmp/antigravity.html)",
+      "Read(//tmp/**)",
+      "Bash(curl -sL --compressed https://antigravity.google/)",
+      "Read(//private/tmp/**)",
+      "Bash(curl -sL https://antigravity.google/assets/image/antigravity-logo.png -o /Users/xavier/Proyectos/Porfolio/assets/antigravity-logo.png)"
     ]
   }
 }
