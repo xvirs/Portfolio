@@ -918,6 +918,52 @@ button { font-family: inherit; cursor: pointer; }
     .nav-links.open { transform: translateY(0); }
     .nav-links a { font-size: 1rem; }
     .nav-burger { display: inline-flex; }
+
+    /* ===== Mobile horizontal carousels ===== */
+    .projects-grid,
+    .stack-groups,
+    .achievements-grid,
+    .certs-list {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 16px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-padding-inline: var(--pad-x);
+        margin-inline: calc(var(--pad-x) * -1);
+        padding: 4px var(--pad-x) 18px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .projects-grid::-webkit-scrollbar,
+    .stack-groups::-webkit-scrollbar,
+    .achievements-grid::-webkit-scrollbar,
+    .certs-list::-webkit-scrollbar { display: none; }
+
+    .projects-grid > .project,
+    .stack-groups > .stack-group,
+    .achievements-grid > .achievement,
+    .certs-list > .cert {
+        flex: 0 0 86%;
+        max-width: 86%;
+        scroll-snap-align: start;
+    }
+
+    .project.featured { flex-basis: 86%; max-width: 86%; }
+
+    .cert { min-height: 76px; }
+
+    /* Subtle hint that content is swipeable */
+    .projects-grid::after,
+    .stack-groups::after,
+    .achievements-grid::after,
+    .certs-list::after {
+        content: '';
+        flex: 0 0 8px;
+    }
 }
 
 @media (max-width: 560px) {
